@@ -37,13 +37,12 @@ const TaskScreen = () => {
   const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newTitle = e.target.value;
     updateTask(task.id, { ...task, title: newTitle });
-    alert('Task updated');
     navigate('/');
   };
 
   const handleDeleteClick = () => {
     deleteTask(task.id);
-    alert('Task deleted');
+    navigate('/');
   };
 
   return (
